@@ -1,0 +1,16 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Teacher Name:</strong>
+  <%= @teacher.teacherName %>
+</p>
+
+<p>
+  <strong>Teacher Email:</strong>
+  <%= @teacher.user.email %>
+</p>
+
+<button type="button" class="btn btn-info"><%= link_to 'Edit', edit_teacher_path(@teacher) %></button>
+<button type="button" class="btn btn-danger"><%= link_to 'Back', teachers_path %></button>
+ 
+

@@ -1,0 +1,10 @@
+<h1>Create New Subject</h1>
+
+
+<button type="button" class="badge badge-secondary">Subject code is unique</button>
+<button type="button" class="badge badge-secondary">One teacher teach only one subject</button>
+<br>
+<br>
+<%= render 'form', subject: @subject %>
+
+<%= link_to 'Back', subjects_path %>

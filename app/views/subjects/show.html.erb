@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Subject code:</strong>
+  <%= @subject.subjectCode %>
+</p>
+
+<p>
+  <strong>Subject Name:</strong>
+  <%= @subject.subjectName %>
+</p>
+
+<p>
+  <strong>Teacher Name:</strong>
+  <%= @subject.teacher.teacherName%>
+</p>
+
+<button type="button" class="btn btn-info"><%= link_to 'Edit', edit_subject_path(@subject) %></button>
+<button type="button" class="btn btn-danger"><%= link_to 'Back', subjects_path %></button>

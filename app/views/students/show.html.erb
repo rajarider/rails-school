@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Student Rollno:</strong>
+  <%= @student.rollNo %>
+</p>
+
+<p>
+  <strong>Student Name:</strong>
+  <%= @student.name %>
+</p>
+
+<button type="button" id="studentEdit"class="btn btn-info"><%= link_to 'Edit', edit_student_path(@student) %></button>
+<button type="button" id="studentBack" class="btn btn-danger"><%= link_to 'Back', students_path %></button>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>School</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <link rel="stylesheet" media="all" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.css" />
+    <link rel="stylesheet" media="all" href="https://cdn.datatables.net/1.10.19/css/dataTables.bootstrap4.min.css" data-turbolinks-track="reload" />
+    
+    <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+    <script src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.min.js"></script>
+    <script src="https://cdn.datatables.net/1.10.19/js/dataTables.bootstrap4.min.js"></script>
+    
+  </head>
+
+  <body>
+    <div class="bodyWrap">        
+      <% if user_signed_in? %>
+          <span>
+            <button type="button"id="userRole" class="badge badge-secondary"><%= current_user.roles.first.name.capitalize %></button>
+          </span>
+          <button type="button" class="btn btn-warning"><%= link_to('Logout', destroy_user_session_path, method: :delete) %> </button>       
+          <div class="float-right">
+            <% if can? :manage, ''  %>
+`             <button type="button" id="homeBtn" class="btn btn-info"><%= link_to 'Home', root_path%></button>
+              <button type="button"id="studentBtn" class="btn btn-primary"><%= link_to 'Students', students_path%></button>
+              <button type="button" id="teacherBtn" class="btn btn-success"><%= link_to 'Teacher', teachers_path%></button>
+              <button type="button" id="subjectBtn" class="btn btn-info"><%= link_to 'Subject', subjects_path%></button>
+            <% else %>
+              <button ype="button" class="btn btn-success"><%= link_to 'Mark to Students', new_mark_path %></button>
+            <% end %>
+          </div>
+      <% end %>
+      <%= yield %>
+    </div>
+  </body>
+</html>

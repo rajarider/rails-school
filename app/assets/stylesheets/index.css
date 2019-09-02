@@ -1,0 +1,123 @@
+body{
+    background-color: #f5f5f5!important;
+}
+.rankWrap{
+    margin-top: 30px;
+}
+.bodyWrap{
+    width: 70%;
+    margin-top: 50px;
+    margin-left: 100px;
+}
+
+button a {
+    color: white!important;
+  }
+button a:hover{
+    text-decoration: none!important;
+  }
+
+#rankTable_wrapper{
+    margin-top: 50px;
+}
+.loginWrap{
+    display: inline-block;
+    background-color: #fff;
+    padding:50px;
+    margin-top:50px;
+    width: 30%;
+}
+.loginWrap input[type="submit"]{
+    width:100%;
+}
+.loginWrap .form-control{
+    border-radius: 0!important;
+}
+.loginWrap .btn{
+    border-radius: 0!important;
+
+}
+#userRole{
+    -webkit-animation: rotation 2s infinite linear;
+}
+@-webkit-keyframes rotation {
+    from {
+            -webkit-transform: rotate(0deg);
+    }
+    to {
+            -webkit-transform: rotate(359deg);
+    }
+}
+
+#studentEdit{
+    position: relative;
+    -webkit-animation: mymove infinite; /* Safari 4.0 - 8.0 */
+    -webkit-animation-duration: 5s; /* Safari 4.0 - 8.0 */
+    animation: mymove infinite;
+    animation-duration: 5s;
+}
+
+@-webkit-keyframes mymove {
+    25% {top: 0px;
+        -webkit-transform: rotate(0deg);}
+    50%{top: 200px;
+        -webkit-transform: rotate(359deg)}
+    75%{
+        top: 200px;
+        -webkit-transform: rotate(0deg);
+    }
+    100%{
+        top: 0px;
+        -webkit-transform: rotate(359deg)
+    }
+  }
+  #studentBack{
+    position: relative;
+    -webkit-animation: mymove1 infinite; /* Safari 4.0 - 8.0 */
+    -webkit-animation-duration: 5s; /* Safari 4.0 - 8.0 */
+    animation: mymove1 infinite;
+    animation-duration: 5s;
+
+  }
+
+  @-webkit-keyframes mymove1 {
+    25% {left: 0px;
+        -webkit-transform: rotate(0deg);}
+    50%{left: 500px;
+        -webkit-transform: rotate(359deg)}
+    75%{
+        left: 500px;
+        -webkit-transform: rotate(0deg);
+    }
+    100%{
+        left: 0px;
+        -webkit-transform: rotate(359deg)
+    }
+  }
+  #homeBtn, #teacherBtn{
+    transform: rotate(20deg);
+  }
+  #studentBtn, #subjectBtn{
+    transform: rotate(-20deg);
+  }
+  .loginWrap{
+    position: relative;
+    -webkit-animation: loginWrap 1; /* Safari 4.0 - 8.0 */
+    -webkit-animation-duration: 5s; /* Safari 4.0 - 8.0 */
+    animation: loginWrap 1;
+    animation-duration: 5s;
+  }
+  @-webkit-keyframes loginWrap {
+    25% {left: 0px;
+        }
+    50%{left: -500px;
+    }
+    75%{
+        left: 500px;
+    }
+    100%{
+        left:0px;
+    }
+   
+
+  }

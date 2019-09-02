@@ -1,0 +1,33 @@
+<%= form_with(model: teacher, local: true) do |teacher| %>
+
+
+  <div class="form-group row">
+      <%= teacher.label :teacherName, "Teacher Name", :class=>"col-sm-2 col-form-label" %>
+      <div class="col-sm-10"> 
+        <%= teacher.text_field :teacherName, :class=>"form-control", :required => 'true'%>
+      </div>
+  </div>
+
+  <%= fields_for :user do |user| %>
+
+    <div class="form-group row">
+      <%= user.label :email, "Teacher Email", :class=>"col-sm-2 col-form-label" %>
+      <div class="col-sm-10"> 
+        <%= user.text_field :email, :class=>"form-control", :required => 'true'%>
+      </div>
+    </div>
+
+    <% if current_page?(action: :new) %>
+      <div class="form-group row">
+        <%= user.label :password, "Password", :class=>"col-sm-2 col-form-label" %>
+        <div class="col-sm-10"> 
+          <%= user.password_field :password, :class=>"form-control", :required => 'true'%>
+        </div>
+      </div>
+    <% end %>
+  <% end %>
+
+  <div class="actions">
+    <%= teacher.submit "Submit"%>
+  </div>
+<% end %>
